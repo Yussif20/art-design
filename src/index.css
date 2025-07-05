@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #fff;
+  --color-brown-text: #6e5c4d;
+  --color-brown-footer: #85735d;
+  --font-en: '"Abhaya Libre"', "serif";
+  --font-ar: "Cairo", "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ✅ Elegant Thin Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-brown-text);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5a4a3d; /* darker brown on hover */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brown-text) transparent;
+}
