@@ -7,13 +7,17 @@ const Footer = () => {
 
   return (
     <footer
-      className={`bg-brown-footer text-white px-4 py-12 md:px-16 ${
-        isArabic ? "font-ar text-right" : "font-en text-left"
+      className={`bg-brown-footer text-white px-4 py-12 md:px-16 text-center md:${
+        isArabic ? "text-right font-ar" : "text-left font-en"
       }`}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div
+        className={`max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-y-12 gap-x-8 ${
+          isArabic ? "md:flex-row-reverse" : "md:flex-row"
+        }`}
+      >
         {/* Location */}
-        <div>
+        <div className="w-full md:w-[30%]">
           <h3 className="text-lg md:text-xl font-medium mb-4">
             {t("footer.location.title")}
           </h3>
@@ -21,7 +25,7 @@ const Footer = () => {
         </div>
 
         {/* Business Hours */}
-        <div>
+        <div className="w-full md:w-[30%]">
           <h3 className="text-lg md:text-xl font-medium mb-4">
             {t("footer.hours.title")}
           </h3>
@@ -33,28 +37,28 @@ const Footer = () => {
         </div>
 
         {/* Social */}
-        <div>
+        <div className="w-full md:w-[30%]">
           <h3 className="text-lg md:text-xl font-medium mb-4">
             {t("footer.social.title")}
           </h3>
           <ul className="space-y-2">
-            <li className="flex items-center gap-2">
+            <li className="flex justify-center md:justify-start items-center gap-2">
               <FaXTwitter />
               <span>@AtheerAbdulrhmn</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex justify-center md:justify-start items-center gap-2">
               <FaInstagram />
               <span>ad_artdesign1</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex justify-center md:justify-start items-center gap-2">
               <FaPhone />
               <span>0502508949</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex justify-center md:justify-start items-center gap-2">
               <FaEnvelope />
               <span>artdesigndetails18@gmail.com</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex justify-center md:justify-start items-center gap-2">
               <FaEnvelope />
               <span>Artdetails78@gmail.com</span>
             </li>
