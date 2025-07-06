@@ -30,9 +30,9 @@ const Hero = () => {
       </div>
 
       {/* Center Quote Text */}
-      <div className="absolute top-1/2 -translate-y-1/2 w-full px-4 md:px-8 z-10">
+      <div className="absolute top-1/2  w-full px-4 md:px-8 z-10">
         <div
-          className={`max-w-3xl text-white text-xl md:text-4xl leading-7 tracking-wide uppercase font-semibold ${
+          className={`max-w-3xl text-white text-xl md:text-4xl leading-3 md:leading-7 tracking-normal md:tracking-wide uppercase font-semibold ${
             isArabic
               ? "md:text-right md:ml-auto text-center"
               : "md:text-left md:mr-auto text-center"
